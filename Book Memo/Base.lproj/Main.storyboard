@@ -59,7 +59,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="V52-BM-Yx1">
             <objects>
-                <tabBarController id="pvd-aa-eg3" sceneMemberID="viewController">
+                <tabBarController id="pvd-aa-eg3" customClass="TabBarController" customModule="Book_Memo" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wHA-Dp-UCh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
