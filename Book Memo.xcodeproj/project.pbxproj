@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C8B966572E4EB669A5BA46BB /* Pods_Book_Memo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63CCDB033204FF54E4D9E2AC /* Pods_Book_Memo.framework */; };
 		D13D733929B9A7370096BEA9 /* BookManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D733829B9A7370096BEA9 /* BookManagementViewController.swift */; };
 		D13D733B29B9A7880096BEA9 /* BookRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D733A29B9A7880096BEA9 /* BookRegisterViewController.swift */; };
 		D13D733D29B9A7AA0096BEA9 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D733C29B9A7AA0096BEA9 /* OtherViewController.swift */; };
@@ -19,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63CCDB033204FF54E4D9E2AC /* Pods_Book_Memo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Book_Memo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72D9A6F4F5B103C791C9B36E /* Pods-Book Memo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Book Memo.release.xcconfig"; path = "Target Support Files/Pods-Book Memo/Pods-Book Memo.release.xcconfig"; sourceTree = "<group>"; };
+		806826913D0BE04FA26C8C9A /* Pods-Book Memo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Book Memo.debug.xcconfig"; path = "Target Support Files/Pods-Book Memo/Pods-Book Memo.debug.xcconfig"; sourceTree = "<group>"; };
 		D13D733829B9A7370096BEA9 /* BookManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookManagementViewController.swift; sourceTree = "<group>"; };
 		D13D733A29B9A7880096BEA9 /* BookRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRegisterViewController.swift; sourceTree = "<group>"; };
 		D13D733C29B9A7AA0096BEA9 /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
@@ -37,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8B966572E4EB669A5BA46BB /* Pods_Book_Memo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46B87114973A1F03F9C9ECE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				806826913D0BE04FA26C8C9A /* Pods-Book Memo.debug.xcconfig */,
+				72D9A6F4F5B103C791C9B36E /* Pods-Book Memo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B550DEBBF65D86DA99CC0C44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63CCDB033204FF54E4D9E2AC /* Pods_Book_Memo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D1A6A2FC29B82E520086323B = {
 			isa = PBXGroup;
 			children = (
 				D1A6A30729B82E520086323B /* Book Memo */,
 				D1A6A30629B82E520086323B /* Products */,
+				46B87114973A1F03F9C9ECE6 /* Pods */,
+				B550DEBBF65D86DA99CC0C44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1A6A31929B82E540086323B /* Build configuration list for PBXNativeTarget "Book Memo" */;
 			buildPhases = (
+				539D301A1D2F457DF7E94645 /* [CP] Check Pods Manifest.lock */,
 				D1A6A30129B82E520086323B /* Sources */,
 				D1A6A30229B82E520086323B /* Frameworks */,
 				D1A6A30329B82E520086323B /* Resources */,
+				E684560FDA6CDA4CAEB739CB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,6 +168,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		539D301A1D2F457DF7E94645 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Book Memo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E684560FDA6CDA4CAEB739CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Book Memo/Pods-Book Memo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Book Memo/Pods-Book Memo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Book Memo/Pods-Book Memo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D1A6A30129B82E520086323B /* Sources */ = {
@@ -294,6 +363,7 @@
 		};
 		D1A6A31A29B82E540086323B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 806826913D0BE04FA26C8C9A /* Pods-Book Memo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,6 +392,7 @@
 		};
 		D1A6A31B29B82E540086323B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72D9A6F4F5B103C791C9B36E /* Pods-Book Memo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
