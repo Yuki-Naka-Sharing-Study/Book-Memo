@@ -17,6 +17,8 @@
 		D1A6A31029B82E520086323B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A6A30E29B82E520086323B /* Main.storyboard */; };
 		D1A6A31229B82E540086323B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1A6A31129B82E540086323B /* Assets.xcassets */; };
 		D1A6A31529B82E540086323B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A6A31329B82E540086323B /* LaunchScreen.storyboard */; };
+		D1ADBD3329B9E27C0035F1B7 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ADBD3229B9E27C0035F1B7 /* Book.swift */; };
+		D1ADBD3529BAC9DF0035F1B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ADBD3429BAC9DF0035F1B7 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		D1A6A31129B82E540086323B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1A6A31429B82E540086323B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1A6A31629B82E540086323B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1ADBD3229B9E27C0035F1B7 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		D1ADBD3429BAC9DF0035F1B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +58,6 @@
 				806826913D0BE04FA26C8C9A /* Pods-Book Memo.debug.xcconfig */,
 				72D9A6F4F5B103C791C9B36E /* Pods-Book Memo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -69,6 +72,8 @@
 		D1A6A2FC29B82E520086323B = {
 			isa = PBXGroup;
 			children = (
+				D1ADBD3429BAC9DF0035F1B7 /* ViewController.swift */,
+				D1ADBD3229B9E27C0035F1B7 /* Book.swift */,
 				D1A6A30729B82E520086323B /* Book Memo */,
 				D1A6A30629B82E520086323B /* Products */,
 				46B87114973A1F03F9C9ECE6 /* Pods */,
@@ -218,9 +223,11 @@
 			files = (
 				D13D733929B9A7370096BEA9 /* BookManagementViewController.swift in Sources */,
 				D13D733D29B9A7AA0096BEA9 /* OtherViewController.swift in Sources */,
+				D1ADBD3329B9E27C0035F1B7 /* Book.swift in Sources */,
 				D1A6A30929B82E520086323B /* AppDelegate.swift in Sources */,
 				D13D733F29B9AAF10096BEA9 /* TabBarController.swift in Sources */,
 				D1A6A30B29B82E520086323B /* SceneDelegate.swift in Sources */,
+				D1ADBD3529BAC9DF0035F1B7 /* ViewController.swift in Sources */,
 				D13D733B29B9A7880096BEA9 /* BookRegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
