@@ -23,17 +23,9 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     // タブバーのアイコンがタップされた時に呼ばれるdelegateメソッドを処理する。
-        func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-            if viewController is BookRegisterViewController {
-                // BookRegisterViewControllerは、タブ切り替えではなくモーダル画面遷移する
-                let BookRegisterViewController = storyboard!.instantiateViewController(withIdentifier: "ImageSelect")
-                present(BookRegisterViewController, animated: true)
-                return false
-            } else {
-                // その他のViewControllerは通常のタブ切り替えを実施
-                return true
-            }
-        }
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+            return true
+    }
     
     /*
     // MARK: - Navigation

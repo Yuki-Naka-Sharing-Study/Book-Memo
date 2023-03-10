@@ -14,16 +14,16 @@ class Book: Object {
     // 本のタイトル
     @objc dynamic var title = ""
     
-    // 読んだ日
+    // 本を読んだ日
     @objc dynamic var date = Date()
     
-    // 感想
+    // 本の感想
     @objc dynamic var contents = ""
     
-    // 本の画像
+    // 本の画像 NSData とは？
     @objc dynamic var image: NSData? = nil
     
-    // 本の状態
+    // 本の状態　（０が初期値）
     @objc dynamic var state = 0
     
     // id をプライマリーキーとして設定
