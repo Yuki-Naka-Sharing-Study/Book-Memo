@@ -80,7 +80,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cG4-sx-LLX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2892" y="340"/>
+            <point key="canvasLocation" x="-3022" y="258"/>
         </scene>
         <!--本を管理-->
         <scene sceneID="Ma8-0p-sp7">
@@ -90,19 +90,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HDB-fw-bKZ">
-                                <rect key="frame" x="76" y="362" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登録する本のタイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpb-je-g2G">
+                                <rect key="frame" x="10" y="69" width="373" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Sk-Dx-XZB">
+                                <rect key="frame" x="10" y="100" width="373" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登録する本の感想" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyJ-bS-2XC">
+                                <rect key="frame" x="10" y="144" width="373" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TU1-wb-hk9">
+                                <rect key="frame" x="10" y="175" width="373" height="584"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fUr-my-Wd7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Sk-Dx-XZB" firstAttribute="top" secondItem="hpb-je-g2G" secondAttribute="bottom" constant="10" id="8fX-h5-iSn"/>
+                            <constraint firstItem="0Sk-Dx-XZB" firstAttribute="leading" secondItem="fUr-my-Wd7" secondAttribute="leading" constant="10" id="DqI-gg-hNV"/>
+                            <constraint firstItem="TU1-wb-hk9" firstAttribute="top" secondItem="NyJ-bS-2XC" secondAttribute="bottom" constant="10" id="Evt-PN-soQ"/>
+                            <constraint firstItem="fUr-my-Wd7" firstAttribute="trailing" secondItem="0Sk-Dx-XZB" secondAttribute="trailing" constant="10" id="LNO-vi-pe5"/>
+                            <constraint firstItem="NyJ-bS-2XC" firstAttribute="leading" secondItem="fUr-my-Wd7" secondAttribute="leading" constant="10" id="TNM-cf-7sD"/>
+                            <constraint firstItem="fUr-my-Wd7" firstAttribute="trailing" secondItem="hpb-je-g2G" secondAttribute="trailing" constant="10" id="Vjm-zV-eP2"/>
+                            <constraint firstItem="TU1-wb-hk9" firstAttribute="leading" secondItem="fUr-my-Wd7" secondAttribute="leading" constant="10" id="ZoN-IV-DX9"/>
+                            <constraint firstItem="fUr-my-Wd7" firstAttribute="trailing" secondItem="TU1-wb-hk9" secondAttribute="trailing" constant="10" id="mgp-7H-jX2"/>
+                            <constraint firstItem="hpb-je-g2G" firstAttribute="top" secondItem="fUr-my-Wd7" secondAttribute="top" constant="10" id="nsA-ha-VKs"/>
+                            <constraint firstItem="fUr-my-Wd7" firstAttribute="bottom" secondItem="TU1-wb-hk9" secondAttribute="bottom" constant="10" id="pbR-zE-ihb"/>
+                            <constraint firstItem="fUr-my-Wd7" firstAttribute="trailing" secondItem="NyJ-bS-2XC" secondAttribute="trailing" constant="10" id="sV9-SM-H2Q"/>
+                            <constraint firstItem="hpb-je-g2G" firstAttribute="leading" secondItem="fUr-my-Wd7" secondAttribute="leading" constant="10" id="svs-x9-0Jk"/>
+                            <constraint firstItem="NyJ-bS-2XC" firstAttribute="top" secondItem="0Sk-Dx-XZB" secondAttribute="bottom" constant="10" id="ufO-ck-V7O"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="本を管理" image="bookmark.square.fill" catalog="system" id="sHd-ef-fN9"/>
-                    <connections>
-                        <outlet property="tableView" destination="HDB-fw-bKZ" id="zBf-wN-GM6"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUR-Uq-TQ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -132,6 +164,9 @@
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="bookmark.square.fill" catalog="system" width="128" height="114"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
