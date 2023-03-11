@@ -15,6 +15,10 @@ class BookRegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBOutlet weak var bookTitleTextField: UITextField?
+    
+    @IBOutlet weak var bookReviewTextView: UITextView?
+    
 
     /*
     // MARK: - Navigation

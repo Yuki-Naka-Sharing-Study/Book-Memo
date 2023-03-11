@@ -11,23 +11,69 @@
         <!--本を登録-->
         <scene sceneID="i8U-jf-Qiy">
             <objects>
-                <viewController id="auV-yu-gpd" sceneMemberID="viewController">
+                <viewController id="auV-yu-gpd" customClass="BookRegisterViewController" customModule="Book_Memo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Qj-tQ-uby">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="読んだ本のタイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZL-X1-pSU">
+                                <rect key="frame" x="10" y="69" width="373" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mfW-rB-MDm">
+                                <rect key="frame" x="10" y="100" width="373" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="読んだ本の感想" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Lw-DT-SUm">
+                                <rect key="frame" x="10" y="144" width="373" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fs5-ch-Q02">
+                                <rect key="frame" x="10" y="175" width="373" height="584"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="SuA-7d-32K"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SuA-7d-32K" firstAttribute="trailing" secondItem="5Lw-DT-SUm" secondAttribute="trailing" constant="10" id="2jr-Dj-3ZH"/>
+                            <constraint firstItem="SuA-7d-32K" firstAttribute="trailing" secondItem="fs5-ch-Q02" secondAttribute="trailing" constant="10" id="3ga-7y-F4q"/>
+                            <constraint firstItem="5Lw-DT-SUm" firstAttribute="top" secondItem="mfW-rB-MDm" secondAttribute="bottom" constant="10" id="7J7-WU-KFd"/>
+                            <constraint firstItem="fs5-ch-Q02" firstAttribute="leading" secondItem="SuA-7d-32K" secondAttribute="leading" constant="10" id="9ne-hz-fs6"/>
+                            <constraint firstItem="mfW-rB-MDm" firstAttribute="top" secondItem="uZL-X1-pSU" secondAttribute="bottom" constant="10" id="Ro0-AH-2Jx"/>
+                            <constraint firstItem="SuA-7d-32K" firstAttribute="trailing" secondItem="uZL-X1-pSU" secondAttribute="trailing" constant="10" id="WEL-RK-Iux"/>
+                            <constraint firstItem="SuA-7d-32K" firstAttribute="trailing" secondItem="mfW-rB-MDm" secondAttribute="trailing" constant="10" id="c6S-ge-5It"/>
+                            <constraint firstItem="fs5-ch-Q02" firstAttribute="top" secondItem="5Lw-DT-SUm" secondAttribute="bottom" constant="10" id="f65-OV-i9Z"/>
+                            <constraint firstItem="uZL-X1-pSU" firstAttribute="top" secondItem="SuA-7d-32K" secondAttribute="top" constant="10" id="myd-vh-XOu"/>
+                            <constraint firstItem="uZL-X1-pSU" firstAttribute="leading" secondItem="SuA-7d-32K" secondAttribute="leading" constant="10" id="pHb-xq-ve5"/>
+                            <constraint firstItem="mfW-rB-MDm" firstAttribute="leading" secondItem="SuA-7d-32K" secondAttribute="leading" constant="10" id="sJ8-er-jZh"/>
+                            <constraint firstItem="SuA-7d-32K" firstAttribute="bottom" secondItem="fs5-ch-Q02" secondAttribute="bottom" constant="10" id="zNl-98-y0v"/>
+                            <constraint firstItem="5Lw-DT-SUm" firstAttribute="leading" secondItem="SuA-7d-32K" secondAttribute="leading" constant="10" id="zo4-pf-4xU"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="本を登録" image="book.fill" catalog="system" id="hWO-Ni-mIj"/>
+                    <connections>
+                        <outlet property="bookReviewTextView" destination="fs5-ch-Q02" id="8fg-Aw-MP3"/>
+                        <outlet property="bookTitleTextField" destination="mfW-rB-MDm" id="bMR-gS-KTp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWK-0Z-8tw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1929" y="-200"/>
+            <point key="canvasLocation" x="-1929.0076335877861" y="-200"/>
         </scene>
         <!--その他-->
         <scene sceneID="Hix-dZ-00Y">
             <objects>
-                <tableViewController id="7yd-K0-9yF" sceneMemberID="viewController">
+                <tableViewController id="7yd-K0-9yF" customClass="Other" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="D6c-jv-fFR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,50 +135,8 @@
                     <view key="view" contentMode="scaleToFill" id="W1g-L5-iEF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登録する本のタイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpb-je-g2G">
-                                <rect key="frame" x="10" y="69" width="373" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Sk-Dx-XZB">
-                                <rect key="frame" x="10" y="100" width="373" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登録する本の感想" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyJ-bS-2XC">
-                                <rect key="frame" x="10" y="144" width="373" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TU1-wb-hk9">
-                                <rect key="frame" x="10" y="175" width="373" height="584"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fUr-my-Wd7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="0Sk-Dx-XZB" firstAttribute="top" secondItem="hpb-je-g2G" secondAttribute="bottom" constant="10" id="8fX-h5-iSn"/>
-                            <constraint firstItem="0Sk-Dx-XZB" firstAttribute="leading" secondItem="fUr-my-Wd7" secondAttribute="leading" constant="10" id="DqI-gg-hNV"/>
-                            <constraint firstItem="TU1-wb-hk9" firstAttribute="top" secondItem="NyJ-bS-2XC" secondAttribute="bottom" constant="10" id="Evt-PN-soQ"/>
-                            <constraint firstItem="fUr-my-Wd7" firstAttribute="trailing" secondItem="0Sk-Dx-XZB" secondAttribute="trailing" constant="10" id="LNO-vi-pe5"/>
-                            <constraint firstItem="NyJ-bS-2XC" firstAttribute="leading" secondItem="fUr-my-Wd7" secondAttribute="leading" constant="10" id="TNM-cf-7sD"/>
-                            <constraint firstItem="fUr-my-Wd7" firstAttribute="trailing" secondItem="hpb-je-g2G" secondAttribute="trailing" constant="10" id="Vjm-zV-eP2"/>
-                            <constraint firstItem="TU1-wb-hk9" firstAttribute="leading" secondItem="fUr-my-Wd7" secondAttribute="leading" constant="10" id="ZoN-IV-DX9"/>
-                            <constraint firstItem="fUr-my-Wd7" firstAttribute="trailing" secondItem="TU1-wb-hk9" secondAttribute="trailing" constant="10" id="mgp-7H-jX2"/>
-                            <constraint firstItem="hpb-je-g2G" firstAttribute="top" secondItem="fUr-my-Wd7" secondAttribute="top" constant="10" id="nsA-ha-VKs"/>
-                            <constraint firstItem="fUr-my-Wd7" firstAttribute="bottom" secondItem="TU1-wb-hk9" secondAttribute="bottom" constant="10" id="pbR-zE-ihb"/>
-                            <constraint firstItem="fUr-my-Wd7" firstAttribute="trailing" secondItem="NyJ-bS-2XC" secondAttribute="trailing" constant="10" id="sV9-SM-H2Q"/>
-                            <constraint firstItem="hpb-je-g2G" firstAttribute="leading" secondItem="fUr-my-Wd7" secondAttribute="leading" constant="10" id="svs-x9-0Jk"/>
-                            <constraint firstItem="NyJ-bS-2XC" firstAttribute="top" secondItem="0Sk-Dx-XZB" secondAttribute="bottom" constant="10" id="ufO-ck-V7O"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="本を管理" image="bookmark.square.fill" catalog="system" id="sHd-ef-fN9"/>
                 </viewController>
