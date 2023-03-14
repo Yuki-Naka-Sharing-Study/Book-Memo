@@ -22,4 +22,7 @@ class BookImageTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    // Bookクラスの内容をセルに表示 (Bookクラスの中に入っている画像データをセルのBookImageViewに表示)
+    
+    
 }
