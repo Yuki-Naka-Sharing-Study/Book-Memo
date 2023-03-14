@@ -21,9 +21,7 @@ class Book: Object {
     @objc dynamic var contents = ""
     
     // 本の画像 NSData とは？
-    @objc dynamic var image: NSData? = nil
-    
-    UIImage(image: image)!
+    @objc dynamic var image: Data? = nil
     
     // 本の状態　（０が初期値）
     @objc dynamic var state = 0

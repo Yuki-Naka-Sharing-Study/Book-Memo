@@ -23,6 +23,15 @@ class BookImageTableViewCell: UITableViewCell {
     }
     
     // Bookクラスの内容をセルに表示 (Bookクラスの中に入っている画像データをセルのBookImageViewに表示)
-    
+    // if let をおそらく使う？
+    func setBook(_ book: Book) {
+        
+        if let BookImageView.image = UIImage(data: book.image) {
+            
+        } else {
+           fatalError()
+        }
+        
+    }
     
 }
