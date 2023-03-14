@@ -3,7 +3,7 @@
 //  Book Memo
 //
 //  Created by 仲優樹 on 2023/03/09.
-//
+// 「参考にすべきカリキュラム」はおそらく「Lesson 8 Chapter 9 タイムライン画面」
 
 import UIKit
 import RealmSwift   // ←追加

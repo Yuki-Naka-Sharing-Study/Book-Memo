@@ -3,7 +3,7 @@
 //  Book Memo
 //
 //  Created by 仲優樹 on 2023/03/09.
-//
+// 「Lesson 6 Chapter 6.5 Realmのモデルクラス」から引用
 
 import RealmSwift
 

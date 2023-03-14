@@ -3,7 +3,7 @@
 //  Book Memo
 //
 //  Created by 仲優樹 on 2023/03/10.
-//
+// 「Lesson 6  Chapter 4.2 画面を作る」から引用
 
 import UIKit
 import RealmSwift   // ←追加
