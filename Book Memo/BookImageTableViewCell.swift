@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import FirebaseStorageUI
 
 class BookImageTableViewCell: UITableViewCell {
+    
     
     @IBOutlet weak var BookImageView: UIImageView!
     
