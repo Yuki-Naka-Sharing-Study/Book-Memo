@@ -28,9 +28,6 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <connections>
-                <outlet property="BookImageView" destination="4XE-Wx-yD1" id="4Jc-Is-2uh"/>
-            </connections>
             <point key="canvasLocation" x="57.251908396946561" y="-46.83098591549296"/>
         </tableViewCell>
     </objects>
