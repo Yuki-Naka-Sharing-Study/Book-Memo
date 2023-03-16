@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BookRegisterViewController: UIViewController {
+class BookRegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,16 @@ class BookRegisterViewController: UIViewController {
     
     @IBOutlet weak var bookReviewTextView: UITextView?
     
-
+    @IBAction func register(_ sender: Any) {
+        // カメラを指定してピッカーを開く
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let pickerController = UIImagePickerController()
+            pickerController.delegate = self
+            pickerController.sourceType = .camera
+            self.present(pickerController, animated: true, completion: nil)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
