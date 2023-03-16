@@ -1,4 +1,22 @@
 PODS:
+  - CLImageEditor/AllTools (0.2.4):
+    - CLImageEditor/Core
+    - CLImageEditor/EmoticonTool
+    - CLImageEditor/ResizeTool
+    - CLImageEditor/SplashTool
+    - CLImageEditor/StickerTool
+    - CLImageEditor/TextTool
+  - CLImageEditor/Core (0.2.4)
+  - CLImageEditor/EmoticonTool (0.2.4):
+    - CLImageEditor/Core
+  - CLImageEditor/ResizeTool (0.2.4):
+    - CLImageEditor/Core
+  - CLImageEditor/SplashTool (0.2.4):
+    - CLImageEditor/Core
+  - CLImageEditor/StickerTool (0.2.4):
+    - CLImageEditor/Core
+  - CLImageEditor/TextTool (0.2.4):
+    - CLImageEditor/Core
   - Realm (10.20.0):
     - Realm/Headers (= 10.20.0)
   - Realm/Headers (10.20.0)
@@ -6,17 +24,20 @@ PODS:
     - Realm (= 10.20.0)
 
 DEPENDENCIES:
+  - CLImageEditor/AllTools (= 0.2.4)
   - RealmSwift (= 10.20.0)
 
 SPEC REPOS:
   trunk:
+    - CLImageEditor
     - Realm
     - RealmSwift
 
 SPEC CHECKSUMS:
+  CLImageEditor: dc3e5358f641368da3a76fc1c744a4c2ceb270ad
   Realm: ae32bdc1da7d19c7617e0400201a77acd4a211b9
   RealmSwift: c95eec6a712924870b2e36c4c081d63ec07e5414
 
-PODFILE CHECKSUM: 6b3b465ad8dad99cdd34d60199be8d8297b292e8
+PODFILE CHECKSUM: 09f4b32c9f8868f748f81868d51533801c841150
 
 COCOAPODS: 1.12.0

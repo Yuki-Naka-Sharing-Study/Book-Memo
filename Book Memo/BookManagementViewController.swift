@@ -10,12 +10,16 @@ import RealmSwift   // ←追加
 
 class BookManagementViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var image: UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         tableView.fillerRowHeight = UITableView.automaticDimension
         tableView.delegate = self
         tableView.dataSource = self
+        // 受け取った画像をImageViewに設定する
+        imageView.image = image
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

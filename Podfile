@@ -7,5 +7,6 @@ target 'Book Memo' do
 
   # Pods for Book Memo
   pod 'RealmSwift', '10.20.0'
+  pod 'CLImageEditor/AllTools', '0.2.4'
 
 end
