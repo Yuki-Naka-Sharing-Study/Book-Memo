@@ -56,9 +56,9 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qye-EG-dDY">
-                                <rect key="frame" x="10" y="720" width="75" height="35"/>
+                                <rect key="frame" x="10" y="720" width="93.333333333333329" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="本を登録"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SuA-7d-32K"/>
