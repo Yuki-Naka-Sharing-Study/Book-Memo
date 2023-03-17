@@ -8,20 +8,26 @@
 import UIKit
 import RealmSwift   // ←追加
 
-class BookManagementViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BookManagementViewController: UIViewController {
     
-    var image: UIImage!
+    @IBOutlet private weak var tableView: UITableView!
+    
+    private let realm = try! Realm()
+    private var bookArray = try! Realm().objects(Book.self).sorted(byKeyPath: "date", ascending: true)  // ←追加
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupView()
+    }
+    
+    private func setupView() {
         tableView.fillerRowHeight = UITableView.automaticDimension
         tableView.delegate = self
         tableView.dataSource = self
-        // 受け取った画像をImageViewに設定する
-        imageView.image = image
     }
-    
+}
+
+extension BookManagementViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bookArray.count
     }
@@ -50,9 +56,7 @@ class BookManagementViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     // セルが削除が可能なことを伝えるメソッド
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath)-> UITableViewCell.EditingStyle {
-        return .delete
-    }
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath)-> UITableViewCell.EditingStyle { .delete }
     
     // Delete ボタンが押された時に呼ばれるメソッド
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -65,16 +69,5 @@ class BookManagementViewController: UIViewController, UITableViewDelegate, UITab
             }
         } // --- ここまで追加 ---
     }
-    
-    @IBOutlet weak var tableView: UITableView!
-    
-    // Realmインスタンスを取得する
-    let realm = try! Realm()  // ←追加
-    
-    // DB内のタスクが格納されるリスト。
-    // 日付の近い順でソート：昇順
-    // 以降内容をアップデートするとリスト内は自動的に更新される。
-    var bookArray = try! Realm().objects(Book.self).sorted(byKeyPath: "date", ascending: true)  // ←追加
-    
-
 }
+
