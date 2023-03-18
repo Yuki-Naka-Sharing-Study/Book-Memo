@@ -59,7 +59,7 @@ class BookRegisterViewController: UIViewController, UIImagePickerControllerDeleg
 //     CLImageEditorで加工が終わったときに呼ばれるメソッド
     func imageEditor(_ editor: CLImageEditor!, didFinishEditingWith image: UIImage!) {
         // imageViewに画像を渡す
-        bookImageView.image =
+        bookImageView.image = image
     }
 
 //     CLImageEditorの編集がキャンセルされた時に呼ばれるメソッド
