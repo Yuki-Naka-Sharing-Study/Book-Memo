@@ -12,14 +12,13 @@ class BookRegisterViewController: UIViewController, UIImagePickerControllerDeleg
     
     @IBOutlet weak var bookTitleTextField: UITextField?
     @IBOutlet weak var bookReviewTextView: UITextView?
+    @IBOutlet weak var bookImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-    
     
     @IBAction func getImage(_ sender: Any) {
         // カメラを指定してピッカーを開く
@@ -43,7 +42,6 @@ class BookRegisterViewController: UIViewController, UIImagePickerControllerDeleg
         if info[.originalImage] != nil {
             // 撮影/選択された画像を取得する
             let image = info[.originalImage] as! UIImage
-
             // CLImageEditorライブラリで加工する
             print("DEBUG_PRINT: image = \(image)")
             // CLImageEditorにimageを渡して、加工画面を起動する。
@@ -60,7 +58,8 @@ class BookRegisterViewController: UIViewController, UIImagePickerControllerDeleg
 
 //     CLImageEditorで加工が終わったときに呼ばれるメソッド
     func imageEditor(_ editor: CLImageEditor!, didFinishEditingWith image: UIImage!) {
-        // 投稿画面を開く imageViewに画像を渡す
+        // imageViewに画像を渡す
+        bookImageView.image =
     }
 
 //     CLImageEditorの編集がキャンセルされた時に呼ばれるメソッド

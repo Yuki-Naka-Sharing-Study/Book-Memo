@@ -93,6 +93,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="本を登録" image="book.fill" catalog="system" id="hWO-Ni-mIj"/>
                     <connections>
+                        <outlet property="bookImageView" destination="5K5-Sb-ImT" id="dS2-7p-ZyA"/>
                         <outlet property="bookReviewTextView" destination="fs5-ch-Q02" id="8fg-Aw-MP3"/>
                         <outlet property="bookTitleTextField" destination="mfW-rB-MDm" id="bMR-gS-KTp"/>
                     </connections>
