@@ -94,7 +94,6 @@
 		D12503C529C404CA001D2922 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				D1A6A31629B82E540086323B /* Info.plist */,
 				D1A6A30829B82E520086323B /* AppDelegate.swift */,
 				D1A6A30A29B82E520086323B /* SceneDelegate.swift */,
 			);
@@ -145,6 +144,7 @@
 				D12503C529C404CA001D2922 /* Delegate */,
 				D12503C429C404A0001D2922 /* Cell */,
 				D1A6A31129B82E540086323B /* Assets.xcassets */,
+				D1A6A31629B82E540086323B /* Info.plist */,
 			);
 			path = "Book Memo";
 			sourceTree = "<group>";
