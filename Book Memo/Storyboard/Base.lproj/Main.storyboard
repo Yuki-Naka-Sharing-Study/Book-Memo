@@ -46,7 +46,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="camera.fill" catalog="system"/>
                                 <connections>
-                                    <action selector="register:" destination="auV-yu-gpd" eventType="touchUpInside" id="Y9t-oD-4lW"/>
+                                    <action selector="getImage:" destination="auV-yu-gpd" eventType="touchUpInside" id="F4G-U1-zAl"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5K5-Sb-ImT">
