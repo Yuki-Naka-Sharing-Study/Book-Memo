@@ -6,14 +6,14 @@
 // 「参考にすべきカリキュラム」はおそらく「Lesson 8 Chapter 9 タイムライン画面」
 
 import UIKit
-import RealmSwift   // ←追加
+import RealmSwift
 
 class BookManagementViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
     private let realm = try! Realm()
-    private var bookArray = try! Realm().objects(Book.self).sorted(byKeyPath: "date", ascending: true)  // ←追加
+    private var bookArray = try! Realm().objects(Book.self).sorted(byKeyPath: "date", ascending: true)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ extension BookManagementViewController: UITableViewDelegate, UITableViewDataSour
         // 再利用可能な cell を得る
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        // Cellに値を設定する  --- ここから ---
+        // Cellに値を設定する
         let task = bookArray[indexPath.row]
         cell.textLabel?.text = task.title
         
@@ -45,7 +45,6 @@ extension BookManagementViewController: UITableViewDelegate, UITableViewDataSour
         
         let dateString:String = formatter.string(from: task.date)
         cell.detailTextLabel?.text = dateString
-        // --- ここまで追加 ---
         
         return cell
     }
@@ -60,14 +59,14 @@ extension BookManagementViewController: UITableViewDelegate, UITableViewDataSour
     
     // Delete ボタンが押された時に呼ばれるメソッド
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        // --- ここから ---
+        
         if editingStyle == .delete {
             // データベースから削除する
             try! realm.write {
                 self.realm.delete(self.bookArray[indexPath.row])
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }
-        } // --- ここまで追加 ---
+        }
     }
 }
 
