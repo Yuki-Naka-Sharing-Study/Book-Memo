@@ -18,7 +18,7 @@ class Book: Object {
     @objc dynamic var date = Date()
     
     // 本の感想
-    @objc dynamic var contents = ""
+    @objc dynamic var review = ""
     
     // 本の画像 NSData とは？
     @objc dynamic var image: Data? = nil

@@ -6,13 +6,17 @@
 //
 
 import UIKit
+import RealmSwift
 import CLImageEditor
 
 class BookRegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLImageEditorDelegate {
     
-    @IBOutlet weak var bookTitleTextField: UITextField?
-    @IBOutlet weak var bookReviewTextView: UITextView?
+    @IBOutlet weak var bookTitleTextField: UITextField!
+    @IBOutlet weak var bookReviewTextView: UITextView!
     @IBOutlet weak var bookImageView: UIImageView!
+    
+    let realm = try! Realm()
+    var book: Book!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +35,12 @@ class BookRegisterViewController: UIViewController, UIImagePickerControllerDeleg
     }
     
     @IBAction func registerBook(_ sender: Any) {
-        
+        try! realm.write {
+            self.book.title = self.bookTitleTextField.text!
+            self.book.review = self.bookReviewTextView.text!
+            self.book.image = self.bookImageView.image!
+            self.realm.add(self.book, update: .modified)
+        }
     }
     
 //     写真を撮影/選択したときに呼ばれるメソッド
