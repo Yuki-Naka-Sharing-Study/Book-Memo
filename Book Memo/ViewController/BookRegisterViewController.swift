@@ -38,7 +38,7 @@ class BookRegisterViewController: UIViewController, UIImagePickerControllerDeleg
         try! realm.write {
             self.book.title = self.bookTitleTextField.text!
             self.book.review = self.bookReviewTextView.text!
-            self.book.image = self.bookImageView.image!
+            self.book.image = self.bookImageView.image!.jpegData(compressionQuality: 1)
             self.realm.add(self.book, update: .modified)
         }
     }
