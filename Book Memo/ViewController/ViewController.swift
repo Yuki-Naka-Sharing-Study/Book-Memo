@@ -6,7 +6,7 @@
 // 「Lesson 6  Chapter 4.2 画面を作る」から引用
 
 import UIKit
-import RealmSwift   // ←追加
+import RealmSwift
 
 class ViewController: UIViewController {
     
@@ -37,7 +37,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         // 再利用可能な cell を得る
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        // Cellに値を設定する  --- ここから ---
+        // Cellに値を設定する
         let task = bookArray[indexPath.row]
         cell.textLabel?.text = task.title
         
@@ -46,7 +46,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         let dateString:String = formatter.string(from: task.date)
         cell.detailTextLabel?.text = dateString
-        // --- ここまで追加 ---
         
         return cell
     }
@@ -63,14 +62,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     // Delete ボタンが押された時に呼ばれるメソッド
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        // --- ここから ---
+        
         if editingStyle == .delete {
             // データベースから削除する
             try! realm.write {
                 self.realm.delete(self.bookArray[indexPath.row])
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }
-        } // --- ここまで追加 ---
+        }
     }
 }
 

@@ -20,6 +20,12 @@ class BookManagementViewController: UIViewController {
         setupView()
     }
     
+    // 入力画面から戻ってきた時に TableView を更新させる
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     private func setupView() {
         tableView.fillerRowHeight = UITableView.automaticDimension
         tableView.delegate = self
@@ -37,13 +43,13 @@ extension BookManagementViewController: UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         // Cellに値を設定する
-        let task = bookArray[indexPath.row]
-        cell.textLabel?.text = task.title
+        let book = bookArray[indexPath.row]
+        cell.textLabel?.text = book.title
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
         
-        let dateString:String = formatter.string(from: task.date)
+        let dateString:String = formatter.string(from: book.date)
         cell.detailTextLabel?.text = dateString
         
         return cell
