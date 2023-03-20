@@ -60,7 +60,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="本を登録"/>
                                 <connections>
-                                    <action selector="registerBook:" destination="auV-yu-gpd" eventType="touchUpInside" id="kce-qa-B9d"/>
+                                    <action selector="registerBook:" destination="auV-yu-gpd" eventType="touchUpInside" id="txV-Uu-gKU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -121,7 +121,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="本を管理" image="bookmark.square.fill" catalog="system" id="sHd-ef-fN9"/>
                     <connections>
-                        <outlet property="tableView" destination="hN5-Rv-7pC" id="Unx-Ao-qmZ"/>
+                        <outlet property="tableView" destination="hN5-Rv-7pC" id="7AP-rc-9FM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUR-Uq-TQ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -24,7 +24,7 @@ class BookRegisterViewController: UIViewController, UIImagePickerControllerDeleg
         // 背景をタップしたらdismissKeyboardメソッドを呼ぶように設定する
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(dismissKeyboard))
         self.view.addGestureRecognizer(tapGesture)
-
+        
         bookTitleTextField.text = book.title
         bookReviewTextView.text = book.review
     }
@@ -34,6 +34,15 @@ class BookRegisterViewController: UIViewController, UIImagePickerControllerDeleg
         view.endEditing(true)
     }
     
+    @IBAction func registerBook(_ sender: Any) {
+        try! realm.write {
+            self.book.title = self.bookTitleTextField.text!
+            self.book.review = self.bookReviewTextView.text!
+            self.book.image = self.bookImageView.image!.jpegData(compressionQuality: 1)
+            self.realm.add(self.book, update: .modified)
+        }
+    }
+    
     @IBAction func getImage(_ sender: Any) {
         // カメラを指定してピッカーを開く
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -41,15 +50,6 @@ class BookRegisterViewController: UIViewController, UIImagePickerControllerDeleg
             pickerController.delegate = self
             pickerController.sourceType = .camera
             self.present(pickerController, animated: true, completion: nil)
-        }
-    }
-    
-    @IBAction func registerBook(_ sender: Any) {
-        try! realm.write {
-            self.book.title = self.bookTitleTextField.text!
-            self.book.review = self.bookReviewTextView.text!
-            self.book.image = self.bookImageView.image!.jpegData(compressionQuality: 1)
-            self.realm.add(self.book, update: .modified)
         }
     }
     
