@@ -32,8 +32,6 @@ class BookRegisterViewController: UIViewController, UIImagePickerControllerDeleg
             book = Book()
         }
         
-        bookTitleTextField.text = book.title
-        bookReviewTextView.text = book.review
     }
     
     @objc func dismissKeyboard(){
