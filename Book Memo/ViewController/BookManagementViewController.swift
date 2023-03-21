@@ -18,7 +18,7 @@ class BookManagementViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // カスタムセルを登録する
-        let nib = UINib(nibName: "PostTableViewCell", bundle: nil)
+        let nib = UINib(nibName: "BookImageTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "Cell")
         setupView()
     }
