@@ -52,7 +52,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     // 各セルを選択した時に実行されるメソッド
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "cellSegue",sender: nil)
+        performSegue(withIdentifier: "Cell",sender: nil)
     }
     
     // セルが削除が可能なことを伝えるメソッド
