@@ -17,6 +17,9 @@ class BookManagementViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // カスタムセルを登録する
+        let nib = UINib(nibName: "PostTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "Cell")
         setupView()
     }
     
@@ -34,6 +37,7 @@ class BookManagementViewController: UIViewController {
 }
 
 extension BookManagementViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bookArray.count
     }
