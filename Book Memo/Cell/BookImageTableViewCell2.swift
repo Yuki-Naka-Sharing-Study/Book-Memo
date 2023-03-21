@@ -2,35 +2,32 @@
 //  BookImageTableViewCell.swift
 //  Book Memo
 //
-//  Created by 仲優樹 on 2023/03/21.
+//  Created by 仲優樹 on 2023/03/14.
 //
 
 import UIKit
 
-class BookImageTableViewCell: UITableViewCell {
+class BookImageTableViewCell2: UITableViewCell {
     
     
-    @IBOutlet weak var bookImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func setBook(_ book: Book) {
         
         if book.image != nil {
             let imageData = UIImage(data: book.image!)!
-            bookImageView.image = imageData
+            // bookImageView.image = imageData
         } else {
             print("There is no image...")
         }
         
     }
+    
 }
