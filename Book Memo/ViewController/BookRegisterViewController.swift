@@ -25,6 +25,13 @@ class BookRegisterViewController: UIViewController, UIImagePickerControllerDeleg
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(dismissKeyboard))
         self.view.addGestureRecognizer(tapGesture)
         
+        if book != nil {
+            
+        } else {
+            // bookがnilであればbookにBookのインスタンスを設定
+            book = Book()
+        }
+        
         bookTitleTextField.text = book.title
         bookReviewTextView.text = book.review
     }
@@ -86,15 +93,5 @@ class BookRegisterViewController: UIViewController, UIImagePickerControllerDeleg
         // CLImageEditor画面を閉じる
         editor.dismiss(animated: true, completion: nil)
     }
-    
-    /*
-     MARK: - Navigation
-
-     In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         Get the new view controller using segue.destination.
-         Pass the selected object to the new view controller.
-    }
-    */
 
 }
