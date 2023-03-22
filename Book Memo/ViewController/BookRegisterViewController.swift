@@ -45,6 +45,11 @@ class BookRegisterViewController: UIViewController, UIImagePickerControllerDeleg
             self.book.review = self.bookReviewTextView.text!
             self.book.image = self.bookImageView.image!.jpegData(compressionQuality: 1)
             self.realm.add(self.book, update: .modified)
+            
+            let allBooks = realm.objects(Book.self)
+            if allBooks.count != 0 {
+                book.id = allBooks.max(ofProperty: "id")! + 1
+            }
         }
     }
     
