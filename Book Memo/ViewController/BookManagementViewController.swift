@@ -19,7 +19,7 @@ class BookManagementViewController: UIViewController {
         super.viewDidLoad()
         // カスタムセルを登録する
         let nib = UINib(nibName: "BookImageTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "Cell")
+        tableView.register(nib, forCellReuseIdentifier: "BookImageTableViewCell")
         setupView()
     }
     
@@ -44,7 +44,7 @@ extension BookManagementViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 再利用可能な cell を得る
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BookImageTableViewCell", for: indexPath)
         
         // Cellに値を設定する
         let book = bookArray[indexPath.row]
@@ -61,7 +61,7 @@ extension BookManagementViewController: UITableViewDelegate, UITableViewDataSour
     
     // 各セルを選択した時に実行されるメソッド
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "Cell",sender: nil)
+        performSegue(withIdentifier: "BookImageTableViewCell",sender: nil)
     }
     
     // セルが削除が可能なことを伝えるメソッド
