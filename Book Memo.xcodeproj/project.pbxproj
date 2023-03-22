@@ -20,8 +20,6 @@
 		D1A6A31529B82E540086323B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A6A31329B82E540086323B /* LaunchScreen.storyboard */; };
 		D1ADBD3329B9E27C0035F1B7 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ADBD3229B9E27C0035F1B7 /* Book.swift */; };
 		D1ADBD3529BAC9DF0035F1B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ADBD3429BAC9DF0035F1B7 /* ViewController.swift */; };
-		D1ADBD3829C0101C0035F1B7 /* BookImageTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ADBD3629C0101C0035F1B7 /* BookImageTableViewCell2.swift */; };
-		D1ADBD3929C0101C0035F1B7 /* BookImageTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1ADBD3729C0101C0035F1B7 /* BookImageTableViewCell2.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +40,6 @@
 		D1A6A31629B82E540086323B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1ADBD3229B9E27C0035F1B7 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		D1ADBD3429BAC9DF0035F1B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D1ADBD3629C0101C0035F1B7 /* BookImageTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookImageTableViewCell2.swift; sourceTree = "<group>"; };
-		D1ADBD3729C0101C0035F1B7 /* BookImageTableViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookImageTableViewCell2.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +85,6 @@
 		D12503C429C404A0001D2922 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				D1ADBD3629C0101C0035F1B7 /* BookImageTableViewCell2.swift */,
-				D1ADBD3729C0101C0035F1B7 /* BookImageTableViewCell2.xib */,
 				D12503C929C9E6E2001D2922 /* BookImageTableViewCell.swift */,
 				D12503CA29C9E6E2001D2922 /* BookImageTableViewCell.xib */,
 			);
@@ -215,7 +209,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1ADBD3929C0101C0035F1B7 /* BookImageTableViewCell2.xib in Resources */,
 				D1A6A31529B82E540086323B /* LaunchScreen.storyboard in Resources */,
 				D1A6A31229B82E540086323B /* Assets.xcassets in Resources */,
 				D1A6A31029B82E520086323B /* Main.storyboard in Resources */,
@@ -277,7 +270,6 @@
 				D1A6A30929B82E520086323B /* AppDelegate.swift in Sources */,
 				D13D733F29B9AAF10096BEA9 /* TabBarController.swift in Sources */,
 				D12503CB29C9E6E2001D2922 /* BookImageTableViewCell.swift in Sources */,
-				D1ADBD3829C0101C0035F1B7 /* BookImageTableViewCell2.swift in Sources */,
 				D1A6A30B29B82E520086323B /* SceneDelegate.swift in Sources */,
 				D1ADBD3529BAC9DF0035F1B7 /* ViewController.swift in Sources */,
 				D13D733B29B9A7880096BEA9 /* BookRegisterViewController.swift in Sources */,
