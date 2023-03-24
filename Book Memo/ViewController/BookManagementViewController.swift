@@ -43,18 +43,10 @@ extension BookManagementViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // 再利用可能な cell を得る
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BookImageTableViewCell", for: indexPath)
         
         // Cellに値を設定する
-        let book = bookArray[indexPath.row]
-        cell.textLabel?.text = book.title
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm"
-        
-        let dateString:String = formatter.string(from: book.date)
-        cell.detailTextLabel?.text = dateString
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BookImageTableViewCell", for: indexPath) as! BookImageTableViewCell
+        cell.setBook(bookArray[indexPath.row])
         
         return cell
     }
