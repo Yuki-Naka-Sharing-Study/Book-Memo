@@ -11,6 +11,7 @@ class BookImageTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var bookImageView: UIImageView!
+    @IBOutlet weak var bookTitleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,6 +32,9 @@ class BookImageTableViewCell: UITableViewCell {
         } else {
             print("There is no image...")
         }
+        
+        // outlet接続をしたLabelに本のタイトルを表示する処理
+        self.bookTitleLabel.text = "\(book.title)"
         
     }
 }
