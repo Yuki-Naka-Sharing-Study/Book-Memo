@@ -11,12 +11,12 @@ class BookDisplayViewController: UIViewController {
     
     
     @IBAction func backBookManagement(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     
     @IBAction func removeBookData(_ sender: Any) {
     }
-    
     
     @IBOutlet private weak var bookImageView: UIImageView!
     
