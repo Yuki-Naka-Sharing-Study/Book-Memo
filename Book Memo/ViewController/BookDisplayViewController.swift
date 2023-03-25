@@ -14,8 +14,7 @@ class BookDisplayViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
-    @IBAction func removeBookData(_ sender: Any) {
+    @IBAction func deleteBookData(_ sender: Any) {
         
     }
     

@@ -178,7 +178,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system"/>
                                 <connections>
-                                    <action selector="removeBookData:" destination="1ev-DL-kgm" eventType="touchUpInside" id="cN1-BK-8yA"/>
+                                    <action selector="deleteBookData:" destination="1ev-DL-kgm" eventType="touchUpInside" id="1LS-eq-eRC"/>
                                 </connections>
                             </button>
                         </subviews>
