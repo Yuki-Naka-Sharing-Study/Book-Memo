@@ -16,6 +16,7 @@ class BookDisplayViewController: UIViewController {
     
     
     @IBAction func removeBookData(_ sender: Any) {
+        
     }
     
     @IBOutlet private weak var bookImageView: UIImageView!
@@ -28,15 +29,7 @@ class BookDisplayViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    // // imageViewに画像を渡す
+    // bookImageView.image = image
 
 }

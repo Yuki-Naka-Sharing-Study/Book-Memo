@@ -121,7 +121,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.forward" catalog="system"/>
                                 <connections>
-                                    <segue destination="1ev-DL-kgm" kind="show" id="j15-fg-zPM"/>
+                                    <segue destination="1ev-DL-kgm" kind="show" id="TFa-Up-Az0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -131,7 +131,7 @@
                     <tabBarItem key="tabBarItem" title="本を管理" image="bookmark.square.fill" catalog="system" id="sHd-ef-fN9"/>
                     <connections>
                         <outlet property="tableView" destination="hN5-Rv-7pC" id="5QN-Lu-E1H"/>
-                        <segue destination="1ev-DL-kgm" kind="show" identifier="BookImageTableViewCell" id="jNN-vI-264"/>
+                        <segue destination="1ev-DL-kgm" kind="show" id="nq2-EX-kc0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUR-Uq-TQ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -141,7 +141,7 @@
         <!--Book Display View Controller-->
         <scene sceneID="u6b-r7-bzR">
             <objects>
-                <viewController id="1ev-DL-kgm" customClass="BookDisplayViewController" customModule="Book_Memo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="1ev-DL-kgm" customClass="BookDisplayViewController" customModule="Book_Memo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pt3-mZ-J1E">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -229,7 +229,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jNN-vI-264"/>
+        <segue reference="nq2-EX-kc0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book.fill" catalog="system" width="128" height="95"/>

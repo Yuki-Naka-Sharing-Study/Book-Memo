@@ -29,6 +29,7 @@ class ViewController: UIViewController {
 
 // MARK: TableView
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bookArray.count
     }
