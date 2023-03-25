@@ -8,6 +8,10 @@
 import UIKit
 
 class BookDisplayViewController: UIViewController {
+    
+    @IBOutlet private weak var bookImageView: UIImageView!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
