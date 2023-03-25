@@ -105,7 +105,7 @@
         <!--本を管理-->
         <scene sceneID="Ma8-0p-sp7">
             <objects>
-                <viewController storyboardIdentifier="Cell" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pkr-he-rFf" customClass="BookManagementViewController" customModule="Book_Memo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BookImageTableViewCell" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pkr-he-rFf" customClass="BookManagementViewController" customModule="Book_Memo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W1g-L5-iEF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

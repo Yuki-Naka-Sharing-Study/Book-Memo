@@ -63,12 +63,16 @@ extension BookManagementViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
+            
             // データベースから削除する
             try! realm.write {
                 self.realm.delete(self.bookArray[indexPath.row])
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }
+            
         }
+        
     }
+    
 }
 
