@@ -131,6 +131,7 @@
                     <tabBarItem key="tabBarItem" title="本を管理" image="bookmark.square.fill" catalog="system" id="sHd-ef-fN9"/>
                     <connections>
                         <outlet property="tableView" destination="hN5-Rv-7pC" id="5QN-Lu-E1H"/>
+                        <segue destination="1ev-DL-kgm" kind="show" identifier="BookImageTableViewCell" id="jNN-vI-264"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUR-Uq-TQ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -201,6 +202,9 @@
             <point key="canvasLocation" x="-3022" y="-430"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="jNN-vI-264"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="bookmark.square.fill" catalog="system" width="128" height="114"/>
