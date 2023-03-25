@@ -9,6 +9,15 @@ import UIKit
 
 class BookDisplayViewController: UIViewController {
     
+    
+    @IBAction func backBookManagement(_ sender: Any) {
+    }
+    
+    
+    @IBAction func removeBookData(_ sender: Any) {
+    }
+    
+    
     @IBOutlet private weak var bookImageView: UIImageView!
     
     
