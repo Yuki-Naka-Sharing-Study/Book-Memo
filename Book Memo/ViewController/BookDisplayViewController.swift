@@ -6,13 +6,9 @@
 //
 
 import UIKit
+import RealmSwift
 
 class BookDisplayViewController: UIViewController {
-    
-    
-    @IBAction func backBookManagement(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
     
     @IBAction func deleteBookData(_ sender: Any) {
         
