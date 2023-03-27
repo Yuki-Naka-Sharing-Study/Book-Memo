@@ -122,7 +122,7 @@
                     <tabBarItem key="tabBarItem" title="本を管理" image="bookmark.square.fill" catalog="system" id="sHd-ef-fN9"/>
                     <connections>
                         <outlet property="tableView" destination="hN5-Rv-7pC" id="5QN-Lu-E1H"/>
-                        <segue destination="1ev-DL-kgm" kind="show" identifier="cellSegue" customClass="BookManagementViewController" customModule="Book_Memo" customModuleProvider="target" id="nq2-EX-kc0"/>
+                        <segue destination="1ev-DL-kgm" kind="show" identifier="cellSegue" id="nq2-EX-kc0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUR-Uq-TQ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
