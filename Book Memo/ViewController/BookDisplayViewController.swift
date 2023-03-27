@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class BookDisplayViewController: UIViewController {
+class BookDisplayViewController: UIViewController, UITableViewDelegate {
     
     private let realm = try! Realm()
     var book: Book!
