@@ -183,6 +183,8 @@
                     <navigationItem key="navigationItem" id="UCA-FW-Rdm"/>
                     <connections>
                         <outlet property="bookImageView" destination="6Gh-od-VUs" id="euV-cz-VhW"/>
+                        <outlet property="bookReviewLabel" destination="aYU-yJ-dfd" id="hcd-71-moU"/>
+                        <outlet property="bookTitleLabel" destination="5b8-bE-ymj" id="Fgb-Vf-IMi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oej-UG-pzU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

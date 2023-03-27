@@ -15,16 +15,27 @@ class BookDisplayViewController: UIViewController {
     }
     
     @IBOutlet private weak var bookImageView: UIImageView!
+    @IBOutlet weak var bookTitleLabel: UILabel!
+    @IBOutlet weak var bookReviewLabel: UILabel!
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    // // imageViewに画像を渡す
-    // bookImageView.image = image
-
+    func setBook(_ book: Book) {
+        
+        if book.image != nil {
+            let imageData = UIImage(data: book.image!)!
+            bookImageView.image = imageData
+        } else {
+            print("There is no image...")
+        }
+        
+        // outlet接続をしたLabelに本のタイトルを表示する処理
+        self.bookTitleLabel.text = "\(book.title)"
+        
+    }
+    
 }
