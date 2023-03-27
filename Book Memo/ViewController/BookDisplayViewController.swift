@@ -10,8 +10,14 @@ import RealmSwift
 
 class BookDisplayViewController: UIViewController {
     
+    private let realm = try! Realm()
+    var book: Book!
+    
     @IBAction func deleteBookData(_ sender: Any) {
-        
+        // データベースから削除する
+        try! realm.write {
+            self.realm.delete(self.book)
+        }
     }
     
     @IBOutlet private weak var bookImageView: UIImageView!
