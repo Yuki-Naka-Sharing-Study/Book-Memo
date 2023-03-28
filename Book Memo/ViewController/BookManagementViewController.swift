@@ -35,7 +35,6 @@ class BookManagementViewController: UIViewController {
         tableView.dataSource = self
     }
     
-    
 }
 
 extension BookManagementViewController: UITableViewDelegate, UITableViewDataSource {
@@ -62,16 +61,7 @@ extension BookManagementViewController: UITableViewDelegate, UITableViewDataSour
             let indexPath = self.tableView.indexPathForSelectedRow
             bookDisplayViewController.book = bookArray[indexPath!.row]
         }
-//        おそらく「ここから」
-//        let book = Book()
-//
-//        let allBooks = realm.objects(Book.self)
-//        if allBooks.count != 0 {
-//            book.id = allBooks.max(ofProperty: "id")! + 1
-//        }
-//
-//        bookDisplayViewController.book = book
-//        「ここまで」のコードが不要説
+        
     }
 
     // 各セルを選択した時に実行されるメソッド

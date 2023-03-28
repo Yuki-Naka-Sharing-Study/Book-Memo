@@ -30,8 +30,9 @@ class BookDisplayViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setBook(book)
     }
-    
+    // BookImageTableViewCell から参考にしたコード
     func setBook(_ book: Book) {
         
         if book.image != nil {
@@ -43,6 +44,7 @@ class BookDisplayViewController: UIViewController, UITableViewDelegate {
         
         // outlet接続をしたLabelに本のタイトルを表示する処理
         self.bookTitleLabel.text = "\(book.title)"
+        self.bookReviewLabel.text = "\(book.review)"
         
     }
     
