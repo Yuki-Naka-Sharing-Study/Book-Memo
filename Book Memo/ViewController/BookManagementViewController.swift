@@ -62,21 +62,22 @@ extension BookManagementViewController: UITableViewDelegate, UITableViewDataSour
             let indexPath = self.tableView.indexPathForSelectedRow
             bookDisplayViewController.book = bookArray[indexPath!.row]
         }
-        // 各セルを選択した時に実行されるメソッド
-        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            performSegue(withIdentifier: "cellSegue",sender: nil)
             
-            let book = Book()
-            
-            let allBooks = realm.objects(Book.self)
-            if allBooks.count != 0 {
-                book.id = allBooks.max(ofProperty: "id")! + 1
-            }
-            
-            bookDisplayViewController.book = book
+        let book = Book()
+        
+        let allBooks = realm.objects(Book.self)
+        if allBooks.count != 0 {
+            book.id = allBooks.max(ofProperty: "id")! + 1
         }
+        
+        bookDisplayViewController.book = book
+        
     }
-    
+
+    // 各セルを選択した時に実行されるメソッド
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    performSegue(withIdentifier: "cellSegue",sender: nil)}
+
     // セルが削除が可能なことを伝えるメソッド
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath)-> UITableViewCell.EditingStyle { .delete }
     
