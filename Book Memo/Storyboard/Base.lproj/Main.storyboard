@@ -150,7 +150,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="読んだ本の感想" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYU-yJ-dfd">
-                                <rect key="frame" x="10" y="380" width="373" height="383"/>
+                                <rect key="frame" x="10" y="380" width="373" height="328"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -164,20 +164,31 @@
                                     <action selector="deleteBookData:" destination="1ev-DL-kgm" eventType="touchUpInside" id="1LS-eq-eRC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20d-Fz-6VN">
+                                <rect key="frame" x="10" y="728" width="373" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="画面を閉じる"/>
+                                <connections>
+                                    <action selector="Close:" destination="1ev-DL-kgm" eventType="touchUpInside" id="9Ew-3M-TJw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yFX-KB-HJW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5b8-bE-ymj" firstAttribute="leading" secondItem="yFX-KB-HJW" secondAttribute="leading" constant="10" id="1wr-PW-PlF"/>
-                            <constraint firstItem="yFX-KB-HJW" firstAttribute="trailing" secondItem="5b8-bE-ymj" secondAttribute="trailing" constant="10" id="5bu-Sm-tfl"/>
-                            <constraint firstItem="5b8-bE-ymj" firstAttribute="top" secondItem="6Gh-od-VUs" secondAttribute="bottom" constant="20" id="7GF-wt-WXu"/>
-                            <constraint firstItem="aYU-yJ-dfd" firstAttribute="leading" secondItem="yFX-KB-HJW" secondAttribute="leading" constant="10" id="8Wl-2z-pgf"/>
-                            <constraint firstItem="6Gh-od-VUs" firstAttribute="leading" secondItem="yFX-KB-HJW" secondAttribute="leading" constant="10" id="E7g-XU-WYD"/>
-                            <constraint firstItem="aYU-yJ-dfd" firstAttribute="top" secondItem="5b8-bE-ymj" secondAttribute="bottom" constant="20" id="S0G-Oy-mIK"/>
-                            <constraint firstItem="yFX-KB-HJW" firstAttribute="trailing" secondItem="aYU-yJ-dfd" secondAttribute="trailing" constant="10" id="hc6-0t-5cI"/>
-                            <constraint firstItem="yFX-KB-HJW" firstAttribute="bottom" secondItem="aYU-yJ-dfd" secondAttribute="bottom" constant="20" id="mU4-el-ffV"/>
-                            <constraint firstItem="6Gh-od-VUs" firstAttribute="top" secondItem="yFX-KB-HJW" secondAttribute="top" constant="10" id="odA-Tz-aOR"/>
-                            <constraint firstItem="yFX-KB-HJW" firstAttribute="trailing" secondItem="6Gh-od-VUs" secondAttribute="trailing" constant="10" id="rwu-vb-Vcg"/>
+                            <constraint firstItem="6Gh-od-VUs" firstAttribute="leading" secondItem="yFX-KB-HJW" secondAttribute="leading" constant="10" id="59Z-2F-qk7"/>
+                            <constraint firstItem="20d-Fz-6VN" firstAttribute="top" secondItem="aYU-yJ-dfd" secondAttribute="bottom" constant="20" id="BpW-Mj-gxQ"/>
+                            <constraint firstItem="5b8-bE-ymj" firstAttribute="top" secondItem="6Gh-od-VUs" secondAttribute="bottom" constant="20" id="CVa-cI-qrg"/>
+                            <constraint firstItem="5b8-bE-ymj" firstAttribute="leading" secondItem="yFX-KB-HJW" secondAttribute="leading" constant="10" id="Dv0-zn-YRM"/>
+                            <constraint firstItem="6Gh-od-VUs" firstAttribute="top" secondItem="yFX-KB-HJW" secondAttribute="top" constant="10" id="GRS-OC-iMT"/>
+                            <constraint firstItem="aYU-yJ-dfd" firstAttribute="top" secondItem="5b8-bE-ymj" secondAttribute="bottom" constant="20" id="RbN-27-I9c"/>
+                            <constraint firstItem="yFX-KB-HJW" firstAttribute="trailing" secondItem="6Gh-od-VUs" secondAttribute="trailing" constant="10" id="TKV-8E-bD5"/>
+                            <constraint firstItem="yFX-KB-HJW" firstAttribute="trailing" secondItem="5b8-bE-ymj" secondAttribute="trailing" constant="10" id="ciF-mW-CJ1"/>
+                            <constraint firstItem="yFX-KB-HJW" firstAttribute="bottom" secondItem="20d-Fz-6VN" secondAttribute="bottom" constant="20" id="njm-hw-A37"/>
+                            <constraint firstItem="aYU-yJ-dfd" firstAttribute="leading" secondItem="yFX-KB-HJW" secondAttribute="leading" constant="10" id="rfM-RG-nCO"/>
+                            <constraint firstItem="20d-Fz-6VN" firstAttribute="leading" secondItem="yFX-KB-HJW" secondAttribute="leading" constant="10" id="swc-Nb-hnm"/>
+                            <constraint firstItem="yFX-KB-HJW" firstAttribute="trailing" secondItem="20d-Fz-6VN" secondAttribute="trailing" constant="10" id="t6X-h7-WIx"/>
+                            <constraint firstItem="yFX-KB-HJW" firstAttribute="trailing" secondItem="aYU-yJ-dfd" secondAttribute="trailing" constant="10" id="vQe-uk-H4N"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UCA-FW-Rdm"/>

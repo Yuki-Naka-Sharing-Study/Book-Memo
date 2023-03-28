@@ -24,6 +24,10 @@ class BookDisplayViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var bookTitleLabel: UILabel!
     @IBOutlet weak var bookReviewLabel: UILabel!
     
+    @IBAction func Close(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
