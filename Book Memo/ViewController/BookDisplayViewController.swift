@@ -24,13 +24,8 @@ class BookDisplayViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var bookTitleLabel: UILabel!
     @IBOutlet weak var bookReviewLabel: UILabel!
     
-    // 1. 遷移先に渡したい値を格納する変数を用意する
-    var outputValue : String?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        bookTitleLabel.text = outputValue
-        // Do any additional setup after loading the view.
     }
     
     func setBook(_ book: Book) {

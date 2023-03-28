@@ -57,14 +57,11 @@ extension BookManagementViewController: UITableViewDelegate, UITableViewDataSour
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let bookDisplayViewController:BookDisplayViewController = segue.destination as! BookDisplayViewController
-        // segueのIDを確認して特定のsegueのときのみ動作させる
+        
         if segue.identifier == "cellSegue" {
-            // 2. 遷移先のBookDisplayViewControllerを取得
-            let next = segue.destination as? BookDisplayViewController
-            // 3. １で用意した遷移先の変数に値を渡す
-            next?.outputValue = BookRegisterViewController.bookTitleTextField.text
+            let indexPath = self.tableView.indexPathForSelectedRow
+            bookDisplayViewController.book = bookArray[indexPath!.row]
         }
-    
         // 各セルを選択した時に実行されるメソッド
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             performSegue(withIdentifier: "cellSegue",sender: nil)
@@ -77,7 +74,7 @@ extension BookManagementViewController: UITableViewDelegate, UITableViewDataSour
             }
             
             bookDisplayViewController.book = book
-         }
+        }
     }
     
     // セルが削除が可能なことを伝えるメソッド
