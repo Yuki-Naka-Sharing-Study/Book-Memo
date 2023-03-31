@@ -35,6 +35,18 @@ class BookManagementViewController: UIViewController {
         tableView.dataSource = self
     }
     
+    // segueが動作することをViewControllerに通知するメソッド
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let bookDisplayViewController:BookDisplayViewController = segue.destination as! BookDisplayViewController
+        
+        if segue.identifier == "cellSegue" {
+            let indexPath = self.tableView.indexPathForSelectedRow
+            bookDisplayViewController.book = bookArray[indexPath!.row]
+        }
+        
+    }
+    
 }
 
 extension BookManagementViewController: UITableViewDelegate, UITableViewDataSource {
@@ -50,18 +62,6 @@ extension BookManagementViewController: UITableViewDelegate, UITableViewDataSour
         cell.setBook(bookArray[indexPath.row])
         
         return cell
-    }
-    
-    // segueが動作することをViewControllerに通知するメソッド
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        let bookDisplayViewController:BookDisplayViewController = segue.destination as! BookDisplayViewController
-        
-        if segue.identifier == "cellSegue" {
-            let indexPath = self.tableView.indexPathForSelectedRow
-            bookDisplayViewController.book = bookArray[indexPath!.row]
-        }
-        
     }
 
     // 各セルを選択した時に実行されるメソッド

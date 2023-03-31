@@ -13,18 +13,19 @@ class BookDisplayViewController: UIViewController, UITableViewDelegate {
     private let realm = try! Realm()
     var book: Book!
     
-    @IBAction func deleteBookData(_ sender: Any) {
-        // データベースから削除する
-        try! realm.write {
-            self.realm.delete(self.book)
-        }
-    }
-    
     @IBOutlet private weak var bookImageView: UIImageView!
     @IBOutlet weak var bookTitleLabel: UILabel!
     @IBOutlet weak var bookReviewLabel: UILabel!
     
     @IBAction func Close(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func deleteBookData(_ sender: Any) {
+        // データベースから削除する
+        try! realm.write {
+            self.realm.delete(self.book)
+        }
         self.dismiss(animated: true, completion: nil)
     }
     

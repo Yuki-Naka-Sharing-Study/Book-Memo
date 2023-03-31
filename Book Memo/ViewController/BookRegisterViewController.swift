@@ -25,13 +25,6 @@ class BookRegisterViewController: UIViewController, UIImagePickerControllerDeleg
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(dismissKeyboard))
         self.view.addGestureRecognizer(tapGesture)
         
-        if book != nil {
-            
-        } else {
-            // bookがnilであればbookにBookのインスタンスを設定
-            book = Book()
-        }
-        
     }
     
     @objc func dismissKeyboard(){
@@ -41,6 +34,12 @@ class BookRegisterViewController: UIViewController, UIImagePickerControllerDeleg
     
     @IBAction func registerBook(_ sender: Any) {
         
+        if bookTitleTextField.text == "" || bookReviewTextView.text == "" || bookImageView.image == nil {
+            // エラーメッセージ
+            
+        }
+        
+        book = Book()
         let allBooks = realm.objects(Book.self)
         if allBooks.count != 0 {
             book.id = allBooks.max(ofProperty: "id")! + 1
@@ -65,7 +64,7 @@ class BookRegisterViewController: UIViewController, UIImagePickerControllerDeleg
         }
     }
     
-//     写真を撮影/選択したときに呼ばれるメソッド
+    //     写真を撮影/選択したときに呼ばれるメソッド
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         // UIImagePickerController画面を閉じる
         picker.dismiss(animated: true, completion: nil)
@@ -86,17 +85,18 @@ class BookRegisterViewController: UIViewController, UIImagePickerControllerDeleg
         // UIImagePickerController画面を閉じる
         picker.dismiss(animated: true, completion: nil)
     }
-
-//     CLImageEditorで加工が終わったときに呼ばれるメソッド
+    
+    //     CLImageEditorで加工が終わったときに呼ばれるメソッド
     func imageEditor(_ editor: CLImageEditor!, didFinishEditingWith image: UIImage!) {
         // imageViewに画像を渡す
         bookImageView.image = image
+        editor.dismiss(animated: true, completion: nil)
     }
-
-//     CLImageEditorの編集がキャンセルされた時に呼ばれるメソッド
+    
+    //     CLImageEditorの編集がキャンセルされた時に呼ばれるメソッド
     func imageEditorDidCancel(_ editor: CLImageEditor!) {
         // CLImageEditor画面を閉じる
         editor.dismiss(animated: true, completion: nil)
     }
-
+    
 }
