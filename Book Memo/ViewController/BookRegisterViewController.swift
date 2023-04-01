@@ -36,7 +36,13 @@ class BookRegisterViewController: UIViewController, UIImagePickerControllerDeleg
         
         if bookTitleTextField.text == "" || bookReviewTextView.text == "" || bookImageView.image == nil {
             // エラーメッセージ
-            
+            // 「本のタイトル」「本のレビュー」「本の画像」のいずれかが入力されていません。
+            // ① UIAlertControllerクラスのインスタンスを生成
+            let alert = UIAlertController(title: "エラーメッセージ", message: "「本のタイトル」「本のレビュー」「本の画像」のいずれかが入力されていません。", preferredStyle: .alert)
+            // ②アクションの追加
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            // ③アラートの表示
+            self.present(alert, animated: true, completion: nil)
         }
         
         book = Book()
