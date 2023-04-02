@@ -43,6 +43,8 @@ class BookRegisterViewController: UIViewController, UIImagePickerControllerDeleg
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             // ③アラートの表示
             self.present(alert, animated: true, completion: nil)
+            
+            return
         }
         
         book = Book()
