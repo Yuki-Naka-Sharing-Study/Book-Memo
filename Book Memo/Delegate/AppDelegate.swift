@@ -13,6 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        //スプラッシュの為に少し起動を遅らせる
+        sleep(1)
         // Override point for customization after application launch.
         return true
     }
